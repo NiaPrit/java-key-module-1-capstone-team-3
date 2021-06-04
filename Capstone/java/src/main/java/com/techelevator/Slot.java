@@ -1,5 +1,6 @@
 package com.techelevator;
 
+<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +25,33 @@ public class Slot {
 
 
     //
+=======
+public class Slot {    // start of class
+
+// Attributes
+private int productNumber;
+private int price;
+private int quantity;
+
+
+
+// Constructor
+
+   public Slot(int price, int productNumber,int quantity){
+       this.productNumber = productNumber;
+       this.price = price;
+       this.quantity = 5;
+   }
+    String productInfo(){
+       getName()
+               return name;
+    }
+    
+//
+
+//Getters/Setters
+
+>>>>>>> 70b9cc8497d610866e6c7f84557717184c05c8fd
 
     public int getProductNumber() {
         return productNumber;
@@ -33,7 +61,11 @@ public class Slot {
         this.productNumber = productNumber;
     }
 
+<<<<<<< HEAD
     public double getPrice() {
+=======
+    public int getPrice() {
+>>>>>>> 70b9cc8497d610866e6c7f84557717184c05c8fd
         return price;
     }
 
@@ -48,6 +80,7 @@ public class Slot {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+<<<<<<< HEAD
 
     public String getName() {
         return name;
@@ -65,3 +98,6 @@ public class Slot {
         this.type = type;
     }
 }
+=======
+}             // end of class
+>>>>>>> 70b9cc8497d610866e6c7f84557717184c05c8fd

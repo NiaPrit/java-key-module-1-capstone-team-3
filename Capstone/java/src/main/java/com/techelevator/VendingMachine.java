@@ -1,5 +1,6 @@
 package com.techelevator;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
@@ -47,4 +48,7 @@ public class VendingMachine {
     public void setItemList(ArrayList<String> itemList) {
         this.itemList = itemList;
     }
+=======
+public class VendingMachine {
+>>>>>>> 70b9cc8497d610866e6c7f84557717184c05c8fd
 }

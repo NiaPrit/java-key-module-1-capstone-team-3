@@ -1,5 +1,6 @@
 package com.techelevator;
 
+<<<<<<< HEAD
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -23,6 +24,24 @@ public class Product {
    //     aLine = items.nextLine();
    // }
     String [] itemsToStock = aLine.split("\\|");                           //Display items separated by pipe |
+=======
+public class Product {    // start of the product class
+
+
+// Attibutes
+private String name;
+private String type;
+
+
+// Constructors
+public Product(String name, String type){
+    this.name = name;
+    this.type = type;
+}
+
+
+//Getters/Setters
+>>>>>>> 70b9cc8497d610866e6c7f84557717184c05c8fd
 
     public String getName() {
         return name;
@@ -39,4 +58,8 @@ public class Product {
     public void setType(String type) {
         this.type = type;
     }
+<<<<<<< HEAD
 }
+=======
+} // end of the product class
+>>>>>>> 70b9cc8497d610866e6c7f84557717184c05c8fd

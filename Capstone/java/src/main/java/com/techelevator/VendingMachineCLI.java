@@ -80,6 +80,8 @@ public class VendingMachineCLI {
 	public void purchaseItems() {	 // static attribute used as method is not associated with specific object instance
 		// Code to purchase items from Vending Machine
 	}
+
+
 	
 	public void endMethodProcessing() { // static attribute used as method is not associated with specific object instance
 		// Any processing that needs to be done before method ends

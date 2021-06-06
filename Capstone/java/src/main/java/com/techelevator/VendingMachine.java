@@ -1,33 +1,35 @@
 package com.techelevator;
 
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
+
 
 public class VendingMachine {
 
+    //Attributes
+    private Inventory vendInventory;
+    private double remainingFunds;//Balance of funds left to purchase
 
-    private Product inventory;
-    private Map<String, String[]> snackStock = new TreeMap<>();     //
-    private double remainingFunds;                                  //Balance of funds left to purchase
-    ArrayList<String> itemList = new ArrayList<>();
-
-
-    public Product getInventory() {
-        return inventory;
+    public VendingMachine() throws FileNotFoundException {
+        this.vendInventory = new Inventory();
+        this.remainingFunds = 0;
+    }
+    // tell inventory to display its products
+    public void displayProducts(){
+        vendInventory.displayProducts(); //telling inventory to display the products
     }
 
-    public void setInventory(Product inventory) {
-        this.inventory = inventory;
+//Getters/Setter
+
+    public Inventory getVendInventory() {
+        return vendInventory;
     }
 
-    public Map<String, String[]> getSnackStock() {
-        return snackStock;
-    }
-
-    public void setSnackStock(Map<String, String[]> snackStock) {
-        this.snackStock = snackStock;
+    public void setVendInventory(Inventory vendInventory) {
+        this.vendInventory = vendInventory;
     }
 
     public double getRemainingFunds() {
@@ -36,14 +38,6 @@ public class VendingMachine {
 
     public void setRemainingFunds(double remainingFunds) {
         this.remainingFunds = remainingFunds;
-    }
-
-    public ArrayList<String> getItemList() {
-        return itemList;
-    }
-
-    public void setItemList(ArrayList<String> itemList) {
-        this.itemList = itemList;
     }
 
 }

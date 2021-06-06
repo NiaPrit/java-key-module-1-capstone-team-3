@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Product {
-
+//Attributes
     private String name;
     private String type;
 
@@ -14,18 +14,6 @@ public class Product {
         this.name = name;
         this.type = type;
     }
-    File inventory = new File("./vendingmachine.csv");                  //input from the text file
-    Scanner items = new Scanner(inventory);                                     // create scanner to select inventory
-    String aLine = "";
-
-
-
-    //  while(items.hasNextLine()) {
-   //     aLine = items.nextLine();
-   // }
-    String [] itemsToStock = aLine.split("\\|");                           //Display items separated by pipe |
-
-
     public String getName() {
         return name;
     }

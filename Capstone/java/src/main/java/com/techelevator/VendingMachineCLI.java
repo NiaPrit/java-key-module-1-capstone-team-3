@@ -12,6 +12,8 @@ package com.techelevator;
 ***************************************************************************************************************************/
 import com.techelevator.view.Menu;         // Gain access to Menu class provided for the Capstone
 
+import java.io.FileNotFoundException;
+
 public class VendingMachineCLI {
 
     // Main menu options defined as constants
@@ -25,8 +27,9 @@ public class VendingMachineCLI {
 													    };
 	
 	private Menu vendingMenu;              // Menu object to be used by an instance of this class
+	private VendingMachine theVendingMachine = new VendingMachine();
 	
-	public VendingMachineCLI(Menu menu) {  // Constructor - user will pass a menu for this class to use
+	public VendingMachineCLI(Menu menu) throws FileNotFoundException {  // Constructor - user will pass a menu for this class to use
 		this.vendingMenu = menu;           // Make the Menu the user object passed, our Menu
 	}
 	/**************************************************************************************************************************
@@ -74,7 +77,7 @@ public class VendingMachineCLI {
  * Methods used to perform processing
  ********************************************************************************************************/
 	public void displayItems() {      // static attribute used as method is not associated with specific object instance
-		// Code to display items from Vending Machine
+		theVendingMachine.displayProducts(); //tell the vending machine to display products
 	}
 	
 	public void purchaseItems() {	 // static attribute used as method is not associated with specific object instance

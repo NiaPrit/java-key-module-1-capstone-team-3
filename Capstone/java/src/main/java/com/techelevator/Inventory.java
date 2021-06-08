@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class Inventory {            //this class holds set of slots
@@ -15,9 +16,10 @@ public class Inventory {            //this class holds set of slots
         firstStock(); // this is going to call the method to load the file into our map
     }
 
+
     // this method will load the file into our map
     public void firstStock() throws FileNotFoundException {
-        File items = new File("./vendingmachine.csv");
+        File items = new File("./Capstone/vendingmachine.csv");
         Scanner inventoryItems = new Scanner("items");
         String aLine = "";
         while (inventoryItems.hasNextLine()) {          // loop while there is next line
@@ -34,8 +36,15 @@ public class Inventory {            //this class holds set of slots
             inventoryList.put(itemDetails[0],itemSlot);  // this adds entries to the map using slot # and slot
         }
     }
+
+        Set<String> itemKeys = inventoryList.keySet();
     // display the items in the inventory
     public void displayProducts(){
+        for(String productDisplay : itemKeys) {
+
+            System.out.println(inventoryList.get(productDisplay));
+
+        }
         // see collections part 2 lecture final for how to display the items in a map
         // think about how do we get to a product using a slot because the map has slots
     }
